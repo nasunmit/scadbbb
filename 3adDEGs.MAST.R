@@ -37,8 +37,7 @@ for (f in files){
   for (c in ctps){
     tmpmeta=meta[meta$cellsubtype==c,]
     tmpmeta=droplevels(tmpmeta)
-    tmpdata=data[,rownames(tmpmeta)]
-    tmpnorm=norm[,rownames(tmpmeta)]
+    tmpdata=norm[,rownames(tmpmeta)]
     group=as.character(tmpmeta$ADdiag2types)
     table(group)
     
