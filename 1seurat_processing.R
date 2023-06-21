@@ -33,7 +33,7 @@ meta=droplevels(meta)
 
 brain=subset(brain,cells=rownames(meta))
 
-
+brain <- NormalizeData(brain, normalization.method = "LogNormalize", scale.factor = 10000)
 brain <- FindVariableFeatures(brain, selection.method = "vst", nfeatures = 2000)
 
 ## scaling the data
